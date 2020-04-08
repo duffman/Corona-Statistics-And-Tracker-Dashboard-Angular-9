@@ -7,14 +7,15 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@types/node": "^13.11.0",
     "axios": "^0.19.2",
+    "chalk": "^4.0.0",
     "cheerio": "^0.22.0",
     "cors": "^2.8.5",
     "csvtojson": "^2.0.10",
     "express": "^4.16.3",
     "ioredis": "*",
-    "mysql": "^2.18.1",
-    "zynaptic-sql": "file:../../../../../Development/npm-packages/zynaptic-sql"
+    "mysql": "^2.18.1"
   },
   "license": "MIT",
   "keywords": [
