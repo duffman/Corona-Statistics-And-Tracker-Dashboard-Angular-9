@@ -12,7 +12,9 @@
     "cors": "^2.8.5",
     "csvtojson": "^2.0.10",
     "express": "^4.16.3",
-    "ioredis": "*"
+    "ioredis": "*",
+    "mysql": "^2.18.1",
+    "zynaptic-sql": "file:../../../../../Development/npm-packages/zynaptic-sql"
   },
   "license": "MIT",
   "keywords": [

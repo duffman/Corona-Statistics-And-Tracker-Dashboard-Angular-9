@@ -1,4 +1,4 @@
-export class Country {
+export interface ICountry {
     country: string;
     cases: number;
     todayCases: number;

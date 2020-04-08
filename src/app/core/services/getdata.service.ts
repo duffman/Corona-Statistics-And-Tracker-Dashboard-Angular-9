@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { retry, catchError } from 'rxjs/operators';
-import { Country } from '../models/country';
+import { ICountry } from '../models/ICountry';
 import { Observable, throwError } from 'rxjs';
 
 HttpClient
@@ -13,14 +13,14 @@ export class GetdataService {
   constructor(private _http: HttpClient) { }
   private host = "https://api.coronastatistics.live"
 
-  getAll(type): Observable<Country>{
-    return this._http.get<Country>(`${this.host}/countries?sort=${type}`).pipe(
+  getAll(type): Observable<ICountry>{
+    return this._http.get<ICountry>(`${this.host}/countries?sort=${type}`).pipe(
       retry(1),
       catchError(this.handleError)
     );
   }
-  getCountry(name): Observable<Country>{
-    return this._http.get<Country>(`${this.host}/countries/${name}`).pipe(
+  getCountry(name): Observable<ICountry>{
+    return this._http.get<ICountry>(`${this.host}/countries/${name}`).pipe(
       retry(1),
       catchError(this.handleError)
     );
